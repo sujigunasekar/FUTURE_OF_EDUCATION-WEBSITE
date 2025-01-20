@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future of Education</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">FUTURE FOR EDUCATION</a>
+            <ul class="nav-links">
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Homepage -->
+    <header id="home">
+        <div class="hero-text">
+            <h1>Shaping the Future of Education</h1>
+            <p>Personalized Learning Paths, Interactive Courses, and a Community for All Ages.</p>
+            <button class="cta-btn" onclick="exploreCourses()">Explore Courses</button>
+        </div>
+        <div class="hero-image">
+            <img src="C:\Users\thula\OneDrive\Desktop\theme\online.png" alt="Online Learning Illustration" class="responsive-img" style="width: 50%; height: auto;">
+        </div>        
+    </header>
+
+   <!-- Courses Section -->
+<section id="courses" class="courses-section">
+    <h2 class="courses-heading">Our Courses</h2>
+    <input type="text" id="search" class="search-bar" placeholder="Search for a course..." onkeyup="filterCourses()">
+    <div class="course-container">
+        <div class="course-card">
+            <img src="C:\Users\thula\OneDrive\Desktop\web\ai.png" alt="AI Course">
+            <h3>Introduction to AI</h3>
+            <p>Beginner | AI & Machine Learning</p>
+            <a href="enroll.html?course=Introduction%20to%20AI" class="course-btn">Enroll Now</a>
+        </div>
+        <div class="course-card">
+            <img src="C:\Users\thula\OneDrive\Desktop\theme\iot.png" alt="IoT Course">
+            <h3>IoT for Beginners</h3>
+            <p>Intermediate | Internet of Things</p>
+            <a href="enroll.html?course=IoT%20for%20Beginners" class="course-btn">Enroll Now</a>
+        </div>
+        <div class="course-card">
+            <img src="C:\Users\thula\OneDrive\Desktop\theme\devops.png" alt="DevOps">
+            <h3>DevOps Fundamentals</h3>
+            <p>Intermediate | Software Development</p>
+            <a href="enroll.html?course=DevOps%20Fundamentals" class="course-btn">Enroll Now</a>
+        </div>
+        <div class="course-card">
+            <img src="C:\Users\thula\OneDrive\Desktop\theme\CYBER.PNG" alt="Cybersecurity">
+            <h3>Cybersecurity Essentials</h3>
+            <p>Intermediate | Security & Compliance</p>
+            <a href="enroll.html?course=Cybersecurity%20Essentials" class="course-btn">Enroll Now</a>
+        </div>
+        <div class="course-card">
+            <img src="C:\Users\thula\OneDrive\Desktop\theme\block.png" alt="Blockchain">
+            <h3>Blockchain Basics</h3>
+            <p>Beginner | Distributed Ledger Technology</p>
+            <a href="enroll.html?course=Blockchain%20Basics" class="course-btn">Enroll Now</a>
+        </div>
+        <div class="course-card">
+            <img src="C:\Users\thula\OneDrive\Desktop\theme\cloud.png" alt="Cloud Computing">
+            <h3>Cloud Computing Overview</h3>
+            <p>Beginner | Cloud Services</p>
+            <a href="enroll.html?course=Cloud%20Computing%20Overview" class="course-btn">Enroll Now</a>
+        </div>
+    </div>
+</section>
+
+<!-- Modal for Course Details -->
+<div id="courseModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="courseTitle"></h2>
+        <p id="courseDescription"></p>
+        <h3>Course Features:</h3>
+        <ul id="courseFeatures"></ul>
+        <form id="enrollmentForm" onsubmit="return registerCourse(event)">
+            <div class="input-group">
+                <label for="studentName">Name:</label>
+                <input type="text" id="studentName" name="studentName" required>
+            </div>
+            <div class="input-group">
+                <label for="studentEmail">Email:</label>
+                <input type="email" id="studentEmail" name="studentEmail" required>
+            </div>
+            <button type="submit">Enroll Now</button>
+        </form>
+    </div>
+</div>
+
+
+
+    <!-- Acknowledgment Section -->
+    <section id="acknowledgment" style="display:none;" class="section-padding bg-light">
+        <h2>Enrollment Confirmation</h2>
+        <p id="confirmation-message"></p>
+    </section>
+
+    <!-- About Us Section -->
+<section id="about" class="section-padding bg-light">
+    <h2>About Us</h2>
+    <p>
+        EduFuture is on a mission to revolutionize education by offering personalized learning paths and making quality education accessible to all. We believe in interactive, technology-driven education that empowers learners to achieve their full potential.
+        <strong>Vision:</strong> Empower lifelong learners globally through accessible, innovative education, fostering collaboration and inclusivity. We aim to transform learning experiences with cutting-edge technology, preparing individuals for future challenges while valuing diverse perspectives and ensuring that quality education is available to everyone.
+        <strong>Mission:</strong> Deliver personalized, high-quality courses across disciplines, creating a supportive community for collaborative learning. Utilize data-driven insights to enhance course offerings and learner engagement, ensuring accessible resources and mentorship opportunities that empower individuals to thrive in a rapidly evolving job market.
+    </p>
+    <div class="team-section">
+        <div class="team-card">
+            <h4>Suji G</h4>
+            <p>Student</p>
+        </div>
+        <div class="team-card">
+            <h4>Archana</h4>
+            <p>Student</p>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact" class="contact-section">
+    <h2>Contact Us</h2>
+    <div class="contact-details">
+        <p><strong>Name:</strong> Yuvarani T</p>
+        <p><strong>Email:</strong> tyuvarani8@gmail.com</p>
+        <p><strong>Phone:</strong> 9956034780</p>
+    </div>
+</section>
+
+<!-- Login Section -->
+<section id="login" class="login-section">
+    <h2>Login</h2>
+    <form id="login-form" action="#" method="POST">
+        <div class="input-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
+        <div class="input-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        <button type="submit" class="login-btn">Login</button>
+    </form>
+    <p>Don't have an account? <a href="signup.html">Sign up here</a>.</p>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 EduFuture. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

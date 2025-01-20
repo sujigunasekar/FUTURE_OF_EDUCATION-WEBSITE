@@ -1,0 +1,350 @@
+/* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #007bff;
+    padding: 1rem 0;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+/* Hero Section */
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e8f5e9;
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: #333;
+}
+
+.hero-text p {
+    font-size: 20px;
+    color: #666;
+}
+
+.cta-btn {
+    padding: 15px 30px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.cta-btn:hover {
+    background-color: #45a049;
+}
+
+/* Section styling */
+.section-padding {
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.course-card {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 1rem 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.course-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+/* Form styling */
+form {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 2rem auto;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.input-group input:focus,
+.input-group select:focus {
+    border-color: #007bff;
+}
+
+/* Button styling */
+.enroll-btn,
+.login-btn,
+.register-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-block;
+    text-align: center;
+}
+
+.enroll-btn:hover,
+.login-btn:hover,
+.register-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Progress bar styling */
+#progress-bar {
+    background-color: #f3f3f3;
+    border-radius: 5px;
+    height: 20px;
+    width: 100%;
+    margin: 1rem 0;
+}
+
+#progress-complete {
+    background-color: #28a745;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Footer styling */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #007bff;
+    color: white;
+    position: relative;
+}
+
+footer p {
+    margin: 0;
+}
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal-width columns */
+    gap: 20px; /* Adjust gap between course cards */
+    margin-top: 20px;
+}
+
+.course-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.course-card img {
+    max-width: 100%; /* Make the image responsive */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.course-btn {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.course-card img {
+    width: 250px; /* Set the width as per your IoT image size */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px;
+}
+.section-padding {
+    padding: 60px 20px; /* Adjust padding as needed */
+    text-align: center; /* Center-align the text */
+}
+
+.bg-light {
+    background-color: #f9f9f9; /* Light background color for visibility */
+}
+
+.contact-section {
+    margin: 10px 0; /* Reduce top and bottom margin to move it up */
+}
+
+.login-section {
+    margin: 10px 0; /* Reduce top and bottom margin to move it up */
+}
+
+.team-section {
+    display: flex; /* Use flexbox for team cards */
+    justify-content: center; /* Center the cards */
+    margin-top: 20px; /* Spacing above team cards */
+}
+
+.team-card {
+    margin: 0 10px; /* Space between team cards */
+    padding: 20px;
+    border: 1px solid #ddd; /* Optional: add a border */
+    border-radius: 5px; /* Optional: round corners */
+    text-align: center; /* Center text in team cards */
+}
+.section-padding {
+    padding: 60px 20px; /* Adjust padding as needed */
+    text-align: center; /* Center-align the text */
+}
+
+.bg-light {
+    background-color: #f9f9f9; /* Light background color for visibility */
+}
+
+.contact-section, .login-section {
+    margin: 20px auto; /* Center align section with auto margins */
+    width: 80%; /* Set a width for the section */
+    max-width: 600px; /* Optional: max-width for better appearance */
+}
+
+.contact-details {
+    text-align: left; /* Align text to the left */
+    margin: 0 auto; /* Center align details */
+}
+
+.input-group {
+    margin-bottom: 15px; /* Space between input fields */
+}
+
+.input-group label {
+    display: block; /* Ensure labels are above inputs */
+    margin-bottom: 5px; /* Space below labels */
+}
+
+.login-btn {
+    margin-top: 10px; /* Space above the button */
+}
+
+/* Add any additional styling as needed */
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Form Styles */
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.courses-heading {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+.search-bar {
+    display: block; /* Change display to block */
+    margin: 0 auto 20px; /* Center the input and add space below */
+    width: 50%; /* Adjust the width as needed */
+    padding: 10px; /* Add some padding for better appearance */
+    font-size: 16px; /* Adjust font size */
+}

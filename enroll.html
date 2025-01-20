@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enroll in Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // Function to get course details based on the URL parameter
+        function getCourseDetails() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const course = urlParams.get('course');
+
+            let courseDetails = '';
+
+            switch (course) {
+                case 'Introduction to AI':
+                    courseDetails = 'This course covers the basics of AI and machine learning. You will learn about algorithms, data processing, and more.';
+                    break;
+                case 'IoT for Beginners':
+                    courseDetails = 'This course introduces the concepts of IoT and how to build IoT applications.';
+                    break;
+                case 'DevOps Fundamentals':
+                    courseDetails = 'Learn the basics of DevOps, including CI/CD, automation, and collaboration.';
+                    break;
+                case 'Cybersecurity Essentials':
+                    courseDetails = 'Understand the principles of cybersecurity and learn to protect systems.';
+                    break;
+                case 'Blockchain Basics':
+                    courseDetails = 'Explore the fundamentals of blockchain technology and its applications.';
+                    break;
+                case 'Cloud Computing Overview':
+                    courseDetails = 'Learn about cloud computing fundamentals, including services and deployment models.';
+                    break;
+                default:
+                    courseDetails = 'Course details not found.';
+            }
+
+            document.getElementById('course-details').innerText = courseDetails;
+            document.getElementById('course-title').innerText = course;
+        }
+
+        // Function to handle form submission
+        function handleEnrollment(event) {
+            event.preventDefault(); // Prevent the form from submitting normally
+
+            // Show the success message
+            document.getElementById('success-message').style.display = 'block';
+
+            // Optionally, you can reset the form
+            document.querySelector('.enrollment-form form').reset();
+        }
+    </script>
+</head>
+<body onload="getCourseDetails()">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">FUTURE FOR EDUCATION</a>
+            <ul class="nav-links">
+                <li><a href="index.html#courses">Courses</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="register.html">Register</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Enroll in Course</h1>
+    </header>
+
+    <section class="enrollment-form">
+        <h2 id="course-title"></h2>
+        <p id="course-details"></p>
+        <form action="#" method="POST" onsubmit="handleEnrollment(event)">
+            <div class="input-group">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <button type="submit" class="enroll-btn">Enroll Now</button>
+        </form>
+        <div id="success-message" style="display:none; color: green; margin-top: 20px;">
+            Successfully registered for the course!
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 EduFuture. All Rights Reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
